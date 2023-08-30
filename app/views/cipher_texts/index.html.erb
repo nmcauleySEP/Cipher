@@ -1,0 +1,8 @@
+<Title>Cipher Texts </Title>
+<ul>
+  <% @cipher_texts.each do |cipher_text| %>
+    <li><%= cipher_text.message %></li>
+  <% end %>
+</ul>
+
+<%= button_to "Create Cipher Text", new_cipher_text_path, method: :get %>

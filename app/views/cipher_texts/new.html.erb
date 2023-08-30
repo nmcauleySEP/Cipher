@@ -1,0 +1,11 @@
+<% if @cipher_text.errors.any? %>
+  <h3>this is unacceptable</h3>
+<% end %>
+
+<%= form_with model: @cipher_text do |form| %>
+  <%= form.label :author, "Name" %>
+  <%= form.text_field :author %>
+  <%= form.label :message, "Encrypted Message" %>
+  <%= form.text_area :message, size: "60x10" %>
+  <%= form.submit "Create" %>
+<% end %>
